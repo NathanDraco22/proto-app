@@ -91,8 +91,8 @@ class _CoinGridTileState extends State<CoinGridTile> with SingleTickerProviderSt
 
   @override
   void dispose() {
-    super.dispose();
     _animationController.dispose();
+    super.dispose();
   }
 
   _animate() {
