@@ -4,3 +4,4 @@ part of 'coin_bloc.dart';
 sealed class CoinEvent {}
 
 final class TurnOnCointEvent extends CoinEvent{}
+final class TurnOffCointEvent extends CoinEvent{}

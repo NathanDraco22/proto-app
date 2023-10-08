@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proto_app/modules/coin_cap_tracker/coin_screen.dart';
+import 'package:proto_app/modules/coin_cap_tracker/view/coin_screen.dart';
 
 void main() => runApp(const MyApp());
 

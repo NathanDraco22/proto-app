@@ -15,7 +15,7 @@ class WebSocketServices {
     return channel!.stream.map((event) => (json.decode(event) as Map));
   }
 
-  Future disconnec()async{
+  Future<void> disconnec()async{
     await channel?.sink.close();
   }
 
