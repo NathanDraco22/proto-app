@@ -1,7 +1,9 @@
 import 'package:go_router/go_router.dart';
 import 'package:proto_app/modules/coin_cap_tracker/view/coin_screen.dart';
 
-import 'package:proto_app/modules/home/home_screen.dart';class AppRouter {
+import 'package:proto_app/modules/home/home_screen.dart';
+
+class AppRouter {
 
   static GoRouter routes = GoRouter(
     routes: [
