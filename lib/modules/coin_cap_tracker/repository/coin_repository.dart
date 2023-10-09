@@ -27,10 +27,10 @@ class CoinPurse {
   CoinPurse(this.bitcoin, this.ethereum, this.litecoin, this.dogecoin);
 
   CoinPurse.initial():
-    bitcoin =  CoinModel("bitcoin", 0.0,0.0, 'https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579'), 
-    ethereum = CoinModel("ethereum", 0.0,0.0,  'https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880'), 
-    litecoin = CoinModel("litecoin", 0.0,0.0, 'https://assets.coingecko.com/coins/images/2/large/litecoin.png?1547033580'), 
-    dogecoin = CoinModel("dogecoin", 0.0,0.0, 'https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256'); 
+    bitcoin =  CoinModel("bitcoin", 0.0,0.0, 'assets/images/bitcoin.png'), 
+    ethereum = CoinModel("ethereum", 0.0,0.0,  'assets/images/ethereum.png'), 
+    litecoin = CoinModel("litecoin", 0.0,0.0, 'assets/images/litecoin.png'), 
+    dogecoin = CoinModel("dogecoin", 0.0,0.0, 'assets/images/dogecoin.png'); 
 
   CoinPurse copyFromMap(Map<String, double> jsonMap) {
     return CoinPurse(

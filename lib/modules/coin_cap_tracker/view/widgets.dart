@@ -129,7 +129,7 @@ class _CoinGridTileState extends State<CoinGridTile> with SingleTickerProviderSt
               SizedBox(
                 width: 90,
                 height: 90,
-                child: Image.network(widget.coinModel.image),
+                child: Image.asset(widget.coinModel.image),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
