@@ -9,7 +9,7 @@ class AppRouter {
       GoRoute(
         path: '/',
         name: 'home',
-        builder: (context, state) => const HomeScreen(),
+        builder: (context, state) => const CharactersScreen(),
         routes: [
 
           GoRoute(
