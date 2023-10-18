@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -8,15 +9,30 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home Screen")),
+      appBar: AppBar(
+        title: const Text("Home Screen"),
+        centerTitle: true,
+        backgroundColor: Colors.blue.withAlpha(50),  
+      ),
       body: ListView(
         children:  [
-           ListTile(
+          const Divider(height: 1),
+          ListTile(
+            leading: const Icon(Icons.attach_money),            
             title:  const Text("CoinCap Websocket"),
             onTap: () {
               context.go('/coincap');
             },
-          )
+          ),
+          const Divider(height: 1),
+          ListTile(
+            leading: const Icon(Icons.network_check),
+            title:  const Text("Rick-Morty GraphQL"),
+            onTap: () {
+              context.go('/rick-gql');
+            },
+          ),
+          const Divider(height: 1),
         ],
       ),
     );

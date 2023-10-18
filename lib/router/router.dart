@@ -9,14 +9,21 @@ class AppRouter {
       GoRoute(
         path: '/',
         name: 'home',
-        builder: (context, state) => const CharactersScreen(),
+        builder: (context, state) => const HomeScreen(),
         routes: [
 
           GoRoute(
             path: 'coincap',
             name: 'coincap',
             builder: (context, state) => const CoinScreen(),
-          )
+          ),
+
+          GoRoute(
+            path: 'rick-gql',
+            name: 'rick-gql',
+            builder: (context, state) => const CharactersScreen(),
+          ),
+
 
         ]
       )
