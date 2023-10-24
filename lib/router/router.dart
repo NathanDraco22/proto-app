@@ -24,6 +24,12 @@ class AppRouter {
             builder: (context, state) => const CharactersScreen(),
           ),
 
+          GoRoute(
+            path: 'webview',
+            name: 'webview',
+            builder: (context, state) => const WebViewScreen(),
+          ),
+
 
         ]
       )

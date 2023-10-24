@@ -32,6 +32,13 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           const Divider(height: 1),
+          ListTile(
+            leading: const Icon(Icons.view_array_outlined),
+            title:  const Text("WebView 3d viewer"),
+            onTap: () {
+              context.go('/webview');
+            },
+          ),
         ],
       ),
     );
