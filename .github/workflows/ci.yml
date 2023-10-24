@@ -23,7 +23,7 @@ jobs:
             - run: flutter analyze
 
     build-web:
-        name: build web
+        name: build and publish webapp
         runs-on: ubuntu-latest
         needs: [flutter-analyze]
         steps: 
@@ -34,9 +34,17 @@ jobs:
             
             - name: getting flutter
               uses: subosito/flutter-action@v2
+
+            - name: getting dependencies - pub get
+              run: flutter pub get
+
+            - name: building web app
+              run: flutter build web --release
             
-            - run: flutter pub get
-
-            - run: flutter build web --release
-
-            - run: ls
+            - name: Deploying Netlify
+              uses: nwtgck/actions-netlify@v2.0
+              with:
+                publish-dir: './build/web'
+                production-branch: main
+                github-token: ${{secrets.GITHUB_TOKEN}}
+                
