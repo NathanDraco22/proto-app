@@ -12,7 +12,7 @@ class ColorImageScreen extends StatelessWidget {
     return ViewModel(
       child: Scaffold(
         appBar: AppBar(title: const Text("Color image Picker")),
-        body: Center(child: Column(
+        body: const Center(child: Column(
           children: [    
             ImagePreview(),
             ColorZone()
@@ -113,7 +113,7 @@ class ImagePreview extends StatelessWidget {
             );
             vm.memoryImage.value = result?.files.first.bytes;
           }, 
-          child: Text("Tocame")
+          child: const Text("Tocame")
         ),
       ],
     );
